@@ -1,0 +1,87 @@
+Question1
+
+db.createCollection("sales",{
+    validor:{
+        $jsonSchema: {
+            bsonType: "object",
+            required: ["salesDate", "purchaseMethod", "storeLocation", "couponUsed", "products", "email", "age"],
+            properties: {
+                salesDate: {
+                    bsonType: "timestamp",
+                    description: "must be a timestamp and is required."
+                },
+                purchaseMethod: {
+                    enum: ["Online", "In store", "Phone"],
+                    description: "must be one of the enum value and is required."
+                },
+                storeLocation: {
+                    enum: ["Seattle", "New York", "Austin", "London", "Denver", "San Diego"],
+                    description: "must be one of the enum value and is required."
+                },
+                couponUsed: {
+                    bsonType: "boolean",
+                    description: "must be boolean and is required."
+                },
+                products: {
+                    bsonType: "array",
+                    minItems: 1,
+                    uniqueItems: true,
+                    items: {
+                        bsonType: "object",
+                        required: ["price", "quantity", "name", "tags"],
+                        properties: {
+                            price: {
+                                bsonType: "decimal",
+                                description: "must be decimal and reqired."
+                            },
+                            quantity: {
+                                bsonType: "int",
+                                description: "must be integer and reqired."
+                            },
+                            name: {
+                                bsonType: "string",
+                                description: "must be string and reqired."
+                            },
+                            tags: {
+                                bsonType: "array",
+                                minItems: 1,
+                                items: {
+                                    enum: ["kids", "school", "stationary", "writing", "organization", "travel", "electronics", "office", "general"],
+                                    description: "must be one of the enum value and is required."
+                                }
+                            }
+                        }
+                    }
+                },
+                email: {
+                    bsonType: "string",
+                    description: "must be string and reqired."
+                },
+                age: {
+                    bsonType: "int",
+                    description: "must be integer and reqired."
+                },
+                gender: {
+                    enum: ["Male", "Female", "Other", null],
+                    description: "can be one of the enum value."
+                },
+                satisfaction: {
+                    enum: [1, 2, 3, 4, 5, null],
+                    description: "can be one of the enum value."
+                }
+            } 
+        }
+    }
+})
+
+
+-------------------------------------------------------------------------------
+Question2
+
+
+mongoimport --uri mongodb+srv://201701177:201701177@cluster0-fbwsl.mongodb.net/201701177 
+	--collection Sales --drop --file "C:\Users\LENOVO\Desktop\Sam6\DBMS\lab\Lab4\sales.json" --jsonArray
+
+
+
+-------------------------------------------------------------------------------

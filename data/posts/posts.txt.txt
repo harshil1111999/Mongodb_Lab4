@@ -1,0 +1,37 @@
+		
+		category:Politics,
+		date: today,
+		author:Jules Winnfield,
+
+		title-'Sanders and Biden Cancel Events as Coronavirus Fears Upend Primary',
+
+		body-'The presidential race entered extraordinary new ground as the leading Democrats called off primary-night events in Cleveland, and President Trump’s signature rallies also faced an uncertain future.'
+		
+		number of views:20,
+		tags:'news','events'
+--------------------------------------------------------------------------------------------------------------------------------------------	
+		category:Sports,
+		date: today,
+		author:Vincent Vega,
+
+		title-'Tottenham knocked out of Champions League by Leipzig',
+
+		body-'Tottenham Hotspur's Champions League Campaign comes to an end as they are well beaten by RB Leipzig in the last 16.'
+		
+		number of views:15,
+		tags:'sports','european football'
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+		category:Entertainment & Arts,
+		date: 10 March 2020,5:30pm UTC time
+		editor: Hans Landa,
+
+		title-'Parasite becomes UK's most successful international film',
+
+		body-'Oscar-winning South Korean movie Parasite has achieved another milestone by becoming the highest-grossing non-English language film in the UK.'
+		
+		number of views:10,
+		tags:'The Oscars','Hollywood'
+		
+---------------------------------------------------------------------------------------------------------------------------------------------
+
